@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main
+      id="main"
+      class="gradient-bg h-screen w-full flex flex-col justify-center"
+    >
+      <div
+        id="wrapper"
+        class="z-20 w-3/4 md:w-2/3 h-4/5 bg-white mx-auto rounded-3xl"
+      >
+        <div class="p-8 h-full flex flex-col items-center">
+          <header class="w-full mb-8 h-1/3 flex flex-col justify-center">
+            <div>
+              <h1 class="text-3xl font-bold font-serif mb-4">
+                Expenses
+              </h1>
+            </div>
+            <div class="flex flex-row w-full">
+              <div
+                id="date-options"
+                class="bg-gray-300 h-22 w-3/4 md:w-1/2 rounded-full flex flex-row justify-between p-2"
+              >
+                <button
+                  title="Weekly view of Expenses"
+                  class="truncate w-1/3 gradient-bg p-4 rounded-full text-center text-white"
+                >
+                  Weekly
+                </button>
+                <button
+                  title="Monthly view of Expenses"
+                  class="truncate w-1/3 hover:text-indigo-600 hover:scale-110 ease-in-out delay-150 bg-transparent p-4 text-center"
+                >
+                  Monthly
+                </button>
+                <button
+                  title="Yearly view o f Expenses"
+                  class="truncate w-1/3 hover:text-indigo-600 hover:scale-110 ease-in-out delay-150 bg-transparent p-4 text-center"
+                >
+                  Yearly
+                </button>
+              </div>
+              <div class="w-1/4 md:w-1/2 flex flex-row justify-end">
+                <button
+                  aria-label="menu-button"
+                  class="bg-transparent border-0"
+                >
+                  <ion-icon
+                    class="text-gray-800 hover:text-indigo-600 hover:scale-150 ease-in-out text-2xl delay-150"
+                    name="ellipsis-horizontal"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+          </header>
+          <div id="chart-container" class="w-full flex flex-col h-2/3">
+            <div class="h-full">
+              <div
+                id="lines"
+                class="h-4/5 justify-evenly flex flex-col-reverse"
+              >
+                <div class="w-full flex flex-row items-center">
+                  <p class="w-1/12 text-center text-gray-500">0</p>
+                  <div class="chart-line w-11/12 bg-gray-900/50"></div>
+                </div>
+                <div class="w-full flex flex-row justify-center items-center">
+                  <p class="w-1/12 text-center text-gray-500">1k</p>
+                  <div class="chart-line w-11/12 bg-gray-900/50"></div>
+                </div>
+                <div class="w-full flex flex-row items-center">
+                  <p class="w-1/12 text-center text-gray-500">2k</p>
+                  <div class="chart-line w-11/12 bg-gray-900/50"></div>
+                </div>
+                <div class="w-full flex flex-row items-center">
+                  <p class="w-1/12 text-center text-gray-500">3k</p>
+                  <div class="chart-line w-11/12 bg-gray-900/50"></div>
+                </div>
+                <div class="w-full flex flex-row items-center">
+                  <p class="w-1/12 text-center text-gray-500">4k</p>
+                  <div class="chart-line w-11/12 bg-gray-900/50"></div>
+                </div>
+              </div>
+              <!--end of lines-->
+              <div
+                id="bars"
+                class="w-full w-11/12 flex flex-row justify-between self-end"
+              >
+                <div class="flex flex-col">
+                  <div class="h-full flex flex-row justify-evenly items-end">
+                    <div class="bg-indigo-500 w-2 h-4/5 rounded-full"></div>
+                    <div class="bg-pink-500 w-1 h-2/5 rounded-full"></div>
+                  </div>
+                  <p class="text-gray-400 text-sm">Mon</p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="h-full flex flex-row justify-evenly items-end">
+                    <div class="bg-indigo-500 w-2 h-3/5 rounded-full"></div>
+                    <div class="bg-pink-500 w-1 h-1/5 rounded-full"></div>
+                  </div>
+                  <p class="text-gray-400 text-sm">Tue</p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="h-full flex flex-row justify-evenly items-end">
+                    <div class="bg-indigo-500 w-2 h-2/5 rounded-full"></div>
+                    <div class="bg-pink-500 w-1 h-1/5 rounded-full"></div>
+                  </div>
+                  <p class="text-gray-400 text-sm">Wed</p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="h-full flex flex-row justify-evenly items-end">
+                    <div class="bg-indigo-500 w-2 h-4/5 rounded-full"></div>
+                    <div class="bg-pink-500 w-1 h-3/5 rounded-full"></div>
+                  </div>
+                  <p class="text-gray-400 text-sm">Thu</p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="h-full flex flex-row justify-evenly items-end">
+                    <div class="bg-indigo-500 w-2 h-1/2 rounded-full"></div>
+                    <div class="bg-pink-500 w-1 h-1/5 rounded-full"></div>
+                  </div>
+                  <p class="text-gray-400 text-sm">Fri</p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="h-full flex flex-row justify-evenly items-end">
+                    <div class="bg-indigo-500 w-2 h-2/4 rounded-full"></div>
+                    <div class="bg-pink-500 w-1 h-1/4 rounded-full"></div>
+                  </div>
+                  <p class="text-gray-400 text-sm">Sat</p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="h-full flex flex-row justify-evenly items-end">
+                    <div class="bg-indigo-500 w-2 h-1/5 rounded-full"></div>
+                    <div class="bg-pink-500 w-1 h-1/5 rounded-full"></div>
+                  </div>
+                  <p class="text-gray-400 text-sm">Sun</p>
+                </div>
+              </div>
+              <!--end of #bars-->
+              <div class="flex flex-row mx-auto w-1/3 justify-between">
+                <div class="flex flex-row items-center">
+                  <div
+                    class="mr-2 w-2 h-2 lg:w-4 lg:h-4 bg-indigo-500 rounded-full"
+                  ></div>
+                  <p>Income</p>
+                </div>
+                <div class="flex flex-row items-center">
+                  <div
+                    class="mr-2 w-2 h-2 lg:w-4 lg:h-4 bg-pink-500 rounded-full"
+                  ></div>
+                  <p>Expenses</p>
+                </div>
+              </div>
+              <!-- end of data types-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="glass"
+        class="z-10 top-12 left-4 sm:left-12 md:left-36 lg:left-44 absolute h-4/5 w-2/3 bg-black rounded-3xl backdrop-blur-md bg-white/30 z-"
+      ></div>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
